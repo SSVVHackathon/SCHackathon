@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: rgb(0, 0, 0);
+  line-height: 1.8;
+}
+
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/heart-healthy-food-1580231690.jpg');
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Blog</a>
+    <a href="#shelter" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Shelter</a>
+    <a href="#restaurant" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Restaurant</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#blog" class="w3-bar-item w3-button" onclick="toggleFunction()">Blog</a>
+    <a href="#shelter" class="w3-bar-item w3-button" onclick="toggleFunction()">Shelter</a>
+    <a href="#restaurant" class="w3-bar-item w3-button" onclick="toggleFunction()">Restaurant</a>
+  </div>
+</div>
+
+
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
+  </div>
+</div>
+
+
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">What Do We Do?</h3>
+  <p class="w3-center"><em>We help to get food to the people in need</em></p>
+  <br>
+  <p>Every single year, around 9 million people die of hunger in the U.S. Yet, millions of restaurants and entertainment services decide to throw out and waste the food they have left at the end of the day. </p>
+  <br>
+
+  <p>At Food Where It Should Be, we have created a system that allows restaurants to insert what food and how much they have left over every single day.  From this, shelters and food banks can esaily pinpoint restaurants in their area using Google Maps to pick up the extra food from the restaurants.</p>
+  <div class="w3-row">
+
+
+    
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="https://www.scarymommy.com/wp-content/uploads/2017/05/hungry-child.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Hungry kids">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://www.politicususa.com/wp-content/uploads/2015/09/POVERTY-HUNGER.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Hungry kids">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://www.waste360.com/sites/waste360.com/files/food%20waste_1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Food wastage">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://horizon-media.s3-eu-west-1.amazonaws.com/s3fs-public/field/image/Food%20waste.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Food wastage">
+    </div>
+  </div>
+
+  
+
+
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ 
+<script>
+
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
