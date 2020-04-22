@@ -2,7 +2,7 @@
 
 {% block title %}Create an account{% endblock %}
 
-{% block content %}
+{% block signupbutton %}
     <form method="POST" class="form-group">
         {% csrf_token %}
         {{form}}

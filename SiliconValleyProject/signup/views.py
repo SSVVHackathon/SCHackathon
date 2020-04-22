@@ -7,7 +7,7 @@ def signup(response):
         form = UserCreationForm(response.POST)
         if form.is_valid():
             form.save()
-        return redirect('/home')
+        # return redirect('')
     else:
         form = UserCreationForm()
     return render(response, 'signup.html', {'form' : form})
