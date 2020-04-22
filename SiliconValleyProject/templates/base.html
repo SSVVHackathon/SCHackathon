@@ -1,19 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <title>Food Where It Should Be</title>
-=======
-    {%if title%}
-    <title>{{title}}</title>
-    {%else%}
-    <title>Food Where it Should Be</title>
-    {%endif%}
->>>>>>> 3ffa763568c5d9c11c7c709a272b31e13a21a6d3
-</head>
-<body>
-    {%block content%}{%endblock%}
-</body>
+  </head>
+  <body>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<html lang="en"> 
+<head>   
+<style>
+    body {
+        background-image: url("https://wallpaperplay.com/walls/full/a/4/1/191258.jpg");
+
+    }
+
+    h1{
+        text-align: center;
+        
+    }
+
+
+    h2{
+        text-align: center;
+        
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    form.restaurant{
+        position:absolute;
+        transition: .5s ease;
+        top: 50%;
+
+    }
+
+    form.shelter{
+        position:absolute;
+        transition: .5s ease;
+        top: 10%;
+    }
+</style> 
+
+ 
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    {%if title%}  
+        <title>{{title}}</title>     
+    {%else%}    
+        <title>Food Where it Should Be</title>     
+    {%endif%} 
+
+
+
+
+</head> 
+<body>  
+    
+    
+    {%block content%}{%endblock%} 
+    <h1 style = "color: red;">Food Where It Should Be</h1>
+    <br>
+    <br>
+
+    <h2 style = "color:whitesmoke; font-size: 140%;">Every single year, around 9 million people die of hunger in the U.S. Yet, restuarnats and other entertainment services throw out hundreds of pounds of food at the end of each day. Why isn't this food donated to local shelters and food banks?  Thats where we come in.</h2>
+   
+    <br>
+    <br>
+
+
+    <h3 style = "color: whitesmoke;">What do we do?</h3>
+
+    <form action="shelter">
+        <input type="submit" value="Shelter">
+            
+    </form>
+
+    <form action="restaurant">
+        <input type="submit" value="Restaurant">
+    
+    </form>
+</body> 
 </html>
