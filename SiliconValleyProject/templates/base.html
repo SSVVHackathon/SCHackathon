@@ -74,7 +74,7 @@
 <body>  
     
     
-    {%block content%}{%endblock%} 
+    {%block code%}{%endblock%} 
     <h1 style = "color: red;">Food Where It Should Be</h1>
     <br>
     <br>
@@ -97,4 +97,16 @@
     
     </form>
 </body> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%if title%}
+        <title>{{title}}</title>
+    {%else%}
+        <title>Food Where it Should Be</title>
+    {%endif%}
+</head>
+<body>
+    {%block content%}{%endblock%}
+</body>
 </html>
