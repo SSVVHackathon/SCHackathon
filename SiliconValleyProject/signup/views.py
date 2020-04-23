@@ -5,7 +5,9 @@ def signup(response):
     if response.method == "POST":
         form = RegisterForm(response.POST)
         if form.is_valid():
-            form.save()
+            post = form.save(commit=False)
+            post.user = response.user
+            post.save()
         # return redirect('')
     else:
         form = RegisterForm()

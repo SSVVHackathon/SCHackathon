@@ -20,23 +20,45 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-        <h1 style = "color: red;">{{heading}}</h1>
-        <br>
-        <br>
-        {%if homepage%} 
-        <h2 style = "color:whitesmoke; font-size: 140%;">Every single year, around 9 million people die of hunger in the U.S. Yet, restuarnats and other entertainment services throw out hundreds of pounds of food at the end of each day. Why isn't this food donated to local shelters and food banks?  Thats where we come in.</h2>
-        <br>
-        <br>
-        <h3 style = "color: whitesmoke;">What do we do?</h3>
+
+
+            
         <form action="shelter">
-            <input type="submit" value="Shelter">
+            <input type="submit" value="Shelter" id = "shelterButton">
                 
         </form>
 
         <form action="restaurant">
-            <input type="submit" value="Restaurant">
+            <input type="submit" value="Restaurant" id = "restButton">
         
         </form>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 style = "color: white;">{{heading}}</h1>
+        <br>
+        <br>
+        <br>
+        {%if homepage%} 
+        <h2 style = "color:whitesmoke; font-size: 140%; ">Every single year, around 9 million people die of hunger in the U.S. Yet, restuarnats and other entertainment services throw out hundreds of pounds of food at the end of each day. Why isn't this food donated to local shelters and food banks?  Thats where we come in.</h2>
+        <br>
+        <br>
+        <h3 style = "color: whitesmoke;">What do we do?</h3>
+
+        <br>
+        <br>
+
+        <h4 style = "color: whitesmoke;">We connect restaurants to local shelters and food banks. Restaurants can easily input their location and how much food they have left at the end of the day. Then, local shelters and food banks can pick up the food to ensure no wastage.</h4>
+
+        <img id = "hungrykid" src="https://www.unitedway.org/i/blog/10.15.19_5_Surprising_Facts_about_Hunger_in_America_Blog-reupload.jpg/@zx_1000@zy_500" alt = "Hungry Kid"/>
+
+        <img id = "foodwaste1" src = "https://www.waste360.com/sites/waste360.com/files/food%20waste_1.jpg" alt = "Waste"/>
+
+
+        
+        
         {%endif%}
         
         {%block signupbutton%}
@@ -45,9 +67,38 @@
     </body>
     <style>
         body {
-            background-image: url("https://wallpaperplay.com/walls/full/a/4/1/191258.jpg");
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/595/692/875/soft-gradient-solid-color-gradient-cyan-cyan-background-hd-wallpaper-preview.jpg");
+            background-size: 1980px 1080px;
 
         }
+
+        #hungrykid {
+        
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 500px; 
+            display: block;
+            margin-left: 30px;
+            margin-top: 50px;
+            
+
+      
+          }
+
+        #foodwaste1 {
+        
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 500px; 
+            display: block;
+            margin-top: -310px;
+            margin-left: 1000px;
+            
+
+      
+          }
 
         h1{
             text-align: center;
@@ -64,18 +115,162 @@
             text-align: center;
         }
 
-        form.restaurant{
+        h4{
+            text-align: center;
+        }
+
+        #shelterButton{
             position:absolute;
             transition: .5s ease;
-            top: 50%;
+            width: 200px;
+            top: 10%;
+            right:72%
+            
+            
 
         }
 
-        form.shelter{
+        #shelterButton {
+            background-color:white; /* Green */
+            border: none;
+            color: black;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+          }
+          
+          #shelterButton {
+            background-color: white; 
+            color: black; 
+            border: 2px solid white;
+          }
+          
+          #shelterButton:hover {
+            background-color: white;
+            color: black;
+          }
+
+
+        #shelterButton {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+          
+        #shelterButton span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+          
+        #shelterButton span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+          
+        #shelterButton:hover span {
+            padding-right: 25px;
+        }
+          
+        #shelterButton:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        #restButton{
             position:absolute;
             transition: .5s ease;
             top: 10%;
+            width : 200px;
+
         }
+
+        #restButton {
+            background-color: white; /* Green */
+            border: none;
+            color: black;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+          }
+          
+          #restButton {
+            background-color: white; 
+            color: black; 
+            border: 2px solid white;
+          }
+          
+          #restButton:hover {
+            background-color: white;
+            color: black;
+          }
+
+        #restButton {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        #restButton span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        #restButton span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        #restButton:hover span {
+            padding-right: 25px;
+        }
+        
+        #restButton:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        
+
     </style>
 <!-- <head>
     <meta charset="UTF-8">
