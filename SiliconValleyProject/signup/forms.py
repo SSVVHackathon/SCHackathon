@@ -1,11 +1,10 @@
 from django import forms
-from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from . models import Signup
 
-class RegisterForm(forms.ModelForm):
+class SignUpForm(UserCreationForm):
     address = forms.CharField(max_length=500)
+
     class Meta:
-        model = Signup
-        fields = ('address',)
+        model = User
+        fields = ('username', 'address', 'password1', 'password2', )
