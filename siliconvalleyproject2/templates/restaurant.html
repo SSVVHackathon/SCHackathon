@@ -1,6 +1,152 @@
+
+
 {%extends "base.html"%}
 {%block signupbutton%}
-    <form action="signup">
-        <input type="submit" value="Signup as a Restaurant">
-    </form>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+
+        
+        <h1 style= "color: black; text-align: center; margin-top: -10px;"  >Restaurant Sign-Up</h1>
+
+        <!-- <form action="signup">
+            <input type="submit" value="Sign-Up Here" id = "signUpButton">
+        </form> -->
+        <br>
+        <br>
+
+        <h2 syle = "color: black; text align: center; font-size: 120%;">Restaurants, your help is the ony way we can feed millions of hungry poeple in shelters. Please, donate your extra food by signing up on the "Sign Up" page.  </p1>
+
+        
+        
+       
+        
+        
+    
+
+       
+
+    </body>
+
+
+
+    
+
+ 
+
+            
+
+   
+    
+
+    <style>
+
+        
+
+    
+
+    #signUpButton{
+        position:absolute;
+        transition: .5s ease;
+        top: 10%;
+        width : 200px;
+        height: 60px;
+        margin-top: 40px;
+        margin-left: -700px;
+
+    }
+
+    #signUpButton {
+        background-color: white; /* Green */
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        margin-top: 40px;
+        margin-left: -700px;
+    }
+      
+    #signUpButton {
+        background-color: white; 
+        color: black; 
+        border: 2px solid white;
+        margin-top: 40px;
+        margin-left: -700px;
+    }
+      
+    #signUpButton:hover {
+        background-color: white;
+        color: black;
+        margin-top: 40px;
+        margin-left: -700px;
+    }
+
+    #signUpButton {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: gray;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        height: 60px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        margin-top: 40px;
+        margin-left: -700px;
+    }
+    
+    #signUpButton span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        margin-top: 40px;
+        margin-left: -700px;
+    }
+    
+    #signUpButton span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        margin-top: 40px;
+        margin-left: -700px;
+    }
+    
+    #signUpButton:hover span {
+        padding-right: 25px;
+        margin-top: 40px;
+        margin-left: -700px;
+    }
+    
+    #signUpButton:hover span:after {
+        opacity: 1;
+        right: 0;
+        margin-top: 40px;
+        margin-left: -700px;
+    } 
+
+</style>
+
+
 {%endblock signupbutton%}
