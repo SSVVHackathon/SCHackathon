@@ -9,5 +9,4 @@ def signup(request):
     if form.is_valid():
         form.save()
         form = ProfileForm()
-
     return render(request, "signup.html", {'form':form})
