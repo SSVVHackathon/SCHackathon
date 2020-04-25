@@ -1,14 +1,12 @@
 {
-    "companies":[
-        {
-        "name":"McDonalds",
-        "type":"restaurant",
-        "email":"mickeyd@gmail.com"
-        },
-        {
-            "name":"FMSC",
-            "type":"shelter",
-            "email":"feedem@gmail.com"
-        }
-    ]
+  "companies": [
+    {
+      "name": "McDonalds",
+      "email": "mickeyd@gmail.com"
+    },
+    {
+      "name": "FMSC",
+      "email": "feedem@gmail.com"
+    }
+  ]
 }
