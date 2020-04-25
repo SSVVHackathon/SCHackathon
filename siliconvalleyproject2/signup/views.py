@@ -13,11 +13,11 @@ def signup(request):
         form = ProfileForm(request.POST)
         if form.is_valid():
             form.save()
-            company_name = form.cleaned_data['company_name']
-            raw_password = form.cleaned_data['password1']
-            # address = form.cleaned_data['address']
-            # email = form.cleaned_data['email']
-            # conversion(address,email,company_name)
+            company_name = form.cleaned_data.get('company_name')
+            raw_password = form.cleaned_data.get('password1')
+            address = form.cleaned_data.get('address')
+            email = form.cleaned_data.get('email')
+            conversion(email)
             account = authenticate(company_name=company_name, password=raw_password)
             return redirect('home')
         else:
