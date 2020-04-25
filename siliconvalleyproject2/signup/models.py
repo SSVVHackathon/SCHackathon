@@ -2,11 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 class MyAccountManager(BaseUserManager):
-    def create_user(self, email, username, company_name, shelter_or_restaurant, address, password=None):
+    def create_user(self, email, company_name, shelter_or_restaurant, address, password=None):
         if not email:
             raise ValueError("Users must have an email address")
-        if not username:
-            raise ValueError("Users must have a username")
         if not company_name:
             raise ValueError("Users must have a company name")
         if not shelter_or_restaurant:
@@ -16,7 +14,6 @@ class MyAccountManager(BaseUserManager):
         
         user = self.model(
             email=self.normalize_email(email),
-            username=username,
             company_name=company_name,
             shelter_or_restaurant=shelter_or_restaurant,
             address=address,
@@ -26,10 +23,9 @@ class MyAccountManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, username, company_name, shelter_or_restaurant, address, password):
+    def create_superuser(self, email, company_name, shelter_or_restaurant, address, password):
         user = self.create_user(
             email=self.normalize_email(email),
-            username=username,
             company_name=company_name,
             shelter_or_restaurant=shelter_or_restaurant,
             address=address,
@@ -46,7 +42,7 @@ class Profile(AbstractBaseUser):
     address = models.CharField(max_length=100, unique=True)
     shelter_or_restaurant = models.CharField(max_length=40)
     company_name = models.CharField(max_length=200, unique=True)
-    username = models.CharField(max_length=30, unique=True)
+    username = models.CharField(max_length=30)
     date_joined = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
     last_login = models.DateTimeField(verbose_name = 'last login', auto_now=True)
     is_admin = models.BooleanField(default=False)
@@ -55,7 +51,7 @@ class Profile(AbstractBaseUser):
     is_superuser = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'company_name'
-    REQUIRED_FIELDS = ['email', 'address', 'shelter_or_restaurant', 'username',]
+    REQUIRED_FIELDS = ['email', 'address', 'shelter_or_restaurant',]
 
     objects = MyAccountManager()
 

@@ -17,7 +17,10 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             address = form.cleaned_data.get('address')
             email = form.cleaned_data.get('email')
-            conversion(email)
+            company_name = str(company_name)
+            address = str(address)
+            email = str(email)
+            conversion(address, email, company_name)
             account = authenticate(company_name=company_name, password=raw_password)
             return redirect('home')
         else:
