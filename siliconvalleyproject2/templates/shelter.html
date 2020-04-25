@@ -12,7 +12,18 @@
     </head>
 
     <body>
-        <h1 style= "color: black; text-align: center;">Shelter</h1>
+
+        {% block header %}
+        <h1 style= "color: black; text-align: center; margin-top: -110px;"  >Shelter</h1>
+        <!-- <form action="signup">
+            <input type="submit" value="Sign-Up Here" id = "signUpButton">
+        </form> -->
+        <br>
+        <br>
+        {% endblock header %}
+
+
+        <h2 style = "color: black; text-align: center; font-size: 180%; margin-top: -160px;">Shelters, please sign-up in order to coorridnate with restaurants willing to donate their food, and help feed the hungry. </h2>
     </body>
 {%endblock content%}
 
