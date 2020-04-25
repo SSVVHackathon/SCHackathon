@@ -1,14 +1,5 @@
 {
   "companies": [
-    {
-      "address": "321 Schaumburg Il",
-      "email": "whatever@gmail.com",
-      "company_name": "Wendy's"
-    },
-    {
-      "address": "321 Schaumburg Il",
-      "email": "whatever@gmail.com",
-      "company_name": "Wendy's"
-    }
+    
   ]
 }
