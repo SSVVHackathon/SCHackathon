@@ -12,10 +12,12 @@ def signup(request):
     if request.POST:
         form = ProfileForm(request.POST)
         if form.is_valid():
-            conversion("321 Schaumburg Il","whatever@gmail.com","Wendy's")
             form.save()
-            company_name = form.cleaned_data.get('company_name')
-            raw_password = form.cleaned_data.get('password1')
+            company_name = form.cleaned_data['company_name']
+            raw_password = form.cleaned_data['password1']
+            # address = form.cleaned_data['address']
+            # email = form.cleaned_data['email']
+            # conversion(address,email,company_name)
             account = authenticate(company_name=company_name, password=raw_password)
             return redirect('home')
         else:

@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 class MyAccountManager(BaseUserManager):
-    def create_user(self, email, username, company_name, shelter_or_restaurant, address, password=None):
+    def create_user(self, email, username, company_name, shelter_or_restaurant, street_name, street_number, state, city, password=None):
         if not email:
             raise ValueError("Users must have an email address")
         if not username:
@@ -11,28 +11,40 @@ class MyAccountManager(BaseUserManager):
             raise ValueError("Users must have a company name")
         if not shelter_or_restaurant:
             raise ValueError("Users must be a shelter or restaurant")
-        if not address:
-            raise ValueError("Users must have an address")
+        if not street_name:
+            raise ValueError("Users must have a street name")
+        if not street_number:
+            raise ValueError("Users must have a street number")
+        if not state:
+            raise ValueError("Users must have a state")
+        if not city:
+            raise ValueError("Users must must have a city")
         
         user = self.model(
             email=self.normalize_email(email),
             username=username,
             company_name=company_name,
             shelter_or_restaurant=shelter_or_restaurant,
-            address=address,
+            street_name=street_name,
+            street_number=street_number,
+            state=state,
+            city=city,
         )
 
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, username, company_name, shelter_or_restaurant, address, password):
+    def create_superuser(self, email, username, company_name, shelter_or_restaurant, street_name, street_number, state, city, password=None):
         user = self.create_user(
             email=self.normalize_email(email),
             username=username,
             company_name=company_name,
             shelter_or_restaurant=shelter_or_restaurant,
-            address=address,
+            street_name=street_name,
+            street_number=street_number,
+            state=state,
+            city=city,
         )
         user.is_admin = True
         user.is_staff = True
@@ -43,7 +55,11 @@ class MyAccountManager(BaseUserManager):
 
 class Profile(AbstractBaseUser):
     email = models.EmailField(verbose_name="email", max_length=60, unique=True)
-    address = models.CharField(max_length=100, unique=True)
+    # address = models.CharField(max_length=100, unique=True)
+    street_name = models.CharField(max_length=200, unique=True)
+    street_number = models.IntegerField()
+    state = models.CharField(max_length=400)
+    city = models.CharField(max_length=400)
     shelter_or_restaurant = models.CharField(max_length=40)
     company_name = models.CharField(max_length=200, unique=True)
     username = models.CharField(max_length=30, unique=True)
@@ -55,7 +71,7 @@ class Profile(AbstractBaseUser):
     is_superuser = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'company_name'
-    REQUIRED_FIELDS = ['email', 'address', 'shelter_or_restaurant', 'username',]
+    REQUIRED_FIELDS = ['email', 'address', 'shelter_or_restaurant', 'username', ]
 
     objects = MyAccountManager()
 
