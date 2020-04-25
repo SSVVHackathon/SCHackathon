@@ -6,19 +6,6 @@ import json
 # Create your views here.
 
 def signup(request):
-    form = ProfileForm(request.POST)
-    if form.is_valid():
-        print(form.cleaned_data.get('address'))
-        # data = {
-        #     "address":f"{form.cleaned_data.get('address')}",
-        #     "company_name":f'{form.cleaned_data.get("company_name")}',
-        #     "email":f'{form.cleaned_data.get("email")}'
-        # }
-        # with open('sign_up_data.json','w') as j:
-        #     file_data = json.load(j)
-        #     file_data['companies'].append(data)
-        #     json.dump(file_data,j)
-        form.save()
     context = {}
     if request.POST:
         form = ProfileForm(request.POST)
