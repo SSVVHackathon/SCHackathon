@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from . forms import ProfileForm
 from . jsonconversion import conversion
 import json
+from . forms import ProfileForm, AccountAuthenticationForm
 # from .forms import ProfileForm
 # Create your views here.
 
@@ -24,4 +25,22 @@ def signup(request):
         context['form'] = form
     return render(request, 'signup.html', context)
 
-
+def login_view(request):
+    context = {}
+    user = request.user
+    if user.is_authenticated:
+        return redirect('home')
+    
+    if request.POST:
+        form = AccountAuthenticationForm(request.POST)
+        if form.is_valid():
+            company_name = request.POST['company_name']
+            password = request.POST['password']
+            user = authenticate(company_name=company_name, password=password)
+            if user:
+                login(request, user)
+                return redirect('home')
+    else:
+        form = AccountAuthenticationForm()
+    context['form'] = form
+    return render(request, 'login.html', context)
