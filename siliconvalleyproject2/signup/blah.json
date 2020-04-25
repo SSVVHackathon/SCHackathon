@@ -1,0 +1,12 @@
+{
+  "companies": [
+    {
+      "name": "McDonalds",
+      "email": "mickeyd@gmail.com"
+    },
+    {
+      "name": "FMSC",
+      "email": "feedem@gmail.com"
+    }
+  ]
+}
