@@ -71,6 +71,8 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL = 'signup.Profile'
+
 WSGI_APPLICATION = 'siliconvalleyproject2.wsgi.application'
 
 
