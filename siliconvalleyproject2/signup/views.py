@@ -15,10 +15,10 @@ def signup(request):
             account = authenticate(company_name=company_name, password=raw_password)
             return redirect('home')
         else:
-            context['registration_form'] = form
+            context['form'] = form
     else:
         form = ProfileForm()
-        context['registration_form'] = form
+        context['form'] = form
     return render(request, 'signup.html', context)
 
 
