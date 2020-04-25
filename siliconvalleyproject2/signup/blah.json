@@ -1,14 +1,14 @@
 {
-    "companies":[
-        {
-        "name":"McDonalds",
-        "type":"restaurant",
-        "email":"mickeyd@gmail.com"
-        },
-        {
-            "name":"FMSC",
-            "type":"shelter",
-            "email":"feedem@gmail.com"
-        }
-    ]
+  "companies": [
+    {
+      "address": "321 Schaumburg Il",
+      "email": "whatever@gmail.com",
+      "company_name": "Wendy's"
+    },
+    {
+      "address": "321 Schaumburg Il",
+      "email": "whatever@gmail.com",
+      "company_name": "Wendy's"
+    }
+  ]
 }

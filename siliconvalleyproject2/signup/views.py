@@ -12,7 +12,7 @@ def signup(request):
     if request.POST:
         form = ProfileForm(request.POST)
         if form.is_valid():
-            conversion()
+            conversion("321 Schaumburg Il","whatever@gmail.com","Wendy's")
             form.save()
             company_name = form.cleaned_data.get('company_name')
             raw_password = form.cleaned_data.get('password1')
