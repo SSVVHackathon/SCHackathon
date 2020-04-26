@@ -1,23 +1,12 @@
 {%extends 'base.html'%}
 
 {%block map%}
-    <h1>Restaurants</h1>
-    {%for c in companies%}
-        {%if c.shelter_or_restaurant == 'Restaurant'%}
-            <p>Company Name: {{c.company_name}}</p>
-            <p>Address: {{c.address}}</p>
-            <p>Email: {{c.email}}</p>
-        {%endif%}
-    {%endfor%}
-    <h1>Shelters</h1>
-    {%for d in companies%}
-        {%if d.shelter_or_restaurant == 'Shelter'%}
-            <p>Company Name: {{d.company_name}}</p>
-            <p>Address: {{d.address}}</p>
-            <p>Email: {{d.email}}</p>
-        {%endif%}
-    {%endfor%}
-<!-- <head>
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdGZWcX8NeOm5jDClKiQuaLxwCV128Wu8&callback=initMap"
+        async defer></script>
+</body>
+<head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
@@ -40,24 +29,7 @@
             center:{lat:39.8283,lng:-98.5795}
         };
         var map = new google.maps.Map(document.getElementById('map'),options);
-
-
-/*        var infoWindow = new google.maps.InfoWindow({
-            content:'<h1>Lyy</h1>'
-        })
-        marker.addListener('click', function(){
-            infoWindow.open(map, marker);
-        })*/
-    
-       // var obj = JSON.parse(jsonobj)
-        //for (let index =0;index<obj.companies.length;index++){
-          //  let lati = obj.companies[index].lat
-            //let longi = obj.companies[index].long
-           // //let ema = obj.companies[index].email
-           // let compi = obj.companies[index].company_name
-            //addMarker({lat:parseFloat(lati),lng:parseFloat(longi)},obj.companies[0].email);
-        //}
-        function addMarker(coords,content) {
+        function addMarker(coords, content) {
             var marker = new google.maps.Marker({
             position:coords,
             map:map
@@ -72,7 +44,34 @@
         }
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdGZWcX8NeOm5jDClKiQuaLxwCV128Wu8&callback=initMap"
-        async defer></script>
-</body> -->
+    <h1>Restaurants</h1>
+    {%for c in companies%}
+        {%if c.shelter_or_restaurant == 'Restaurant'%}
+            <p>{{c.company_name}}</p>
+            <p>{{c.address}}</p>
+            <p>{{c.email}}</p>
+            
+        {%endif%}
+    {%endfor%}
+    <h1>Shelters</h1>
+    {%for d in companies%}
+        {%if d.shelter_or_restaurant == 'Shelter'%}
+            <p>{{d.company_name}}</p>
+            <p>{{d.address}}</p>
+            <p>{{d.email}}</p>
+            <script type ='text/javascript'>
+                var email = "{{d.email}}"
+                var address = "{{d.address}}"
+                var company_name = "{{d.company_name}}"
+                var lat = "{{d.lat}}"
+                lat = parseFloat(lat)
+                var lng = "{{d.lng}}"
+                lng = parseFloat(lat)
+                initMap().addMarker({coords:{lat:lat,  lng:lng}, content:company_name})
+            </script>
+        {%endif%}
+    {%endfor%}
+
+
+
 {%endblock%}
