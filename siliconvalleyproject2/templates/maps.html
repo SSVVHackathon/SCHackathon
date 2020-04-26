@@ -1,28 +1,6 @@
 {%extends 'base.html'%}
 
 {%block map%}
-    <h1>Restaurants</h1>
-    {%for c in companies%}
-        {%if c.shelter_or_restaurant == 'Restaurant'%}
-            <p>{{c.company_name}}</p>
-            <p>{{c.address}}</p>
-            <p>{{c.email}}</p>
-            
-        {%endif%}
-    {%endfor%}
-    <h1>Shelters</h1>
-    {%for d in companies%}
-        {%if d.shelter_or_restaurant == 'Shelter'%}
-            <p>{{d.company_name}}</p>
-            <p>{{d.address}}</p>
-            <p>{{d.email}}
-            </p><script type ='text/javascript'>
-                var a = "{{d.email}}"
-                console.log(a)
-                console.log('fjeo')
-            </script>
-        {%endif%}
-    {%endfor%}
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -81,4 +59,27 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdGZWcX8NeOm5jDClKiQuaLxwCV128Wu8&callback=initMap"
         async defer></script>
 </body>
+    <h1>Restaurants</h1>
+    {%for c in companies%}
+        {%if c.shelter_or_restaurant == 'Restaurant'%}
+            <p>{{c.company_name}}</p>
+            <p>{{c.address}}</p>
+            <p>{{c.email}}</p>
+            
+        {%endif%}
+    {%endfor%}
+    <h1>Shelters</h1>
+    {%for d in companies%}
+        {%if d.shelter_or_restaurant == 'Shelter'%}
+            <p>{{d.company_name}}</p>
+            <p>{{d.address}}</p>
+            <p>{{d.email}}
+            </p><script type ='text/javascript'>
+                var a = "{{d.email}}"
+                console.log(a)
+                console.log('fjeo')
+            </script>
+        {%endif%}
+    {%endfor%}
+
 {%endblock%}
