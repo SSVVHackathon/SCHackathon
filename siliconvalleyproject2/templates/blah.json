@@ -1,0 +1,12 @@
+{
+  "companies": [
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "lat": 42.011577041468875,
+      "lng": -88.0723791236503,
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    }
+  ]
+}

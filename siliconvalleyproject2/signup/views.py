@@ -5,9 +5,11 @@ from . jsonconversion import conversion
 import json
 from . forms import ProfileForm, AccountAuthenticationForm
 from . getdata import data
+from geopy import geocoders
 
 # from .forms import ProfileForm
 # Create your views here.
+g = geocoders.Nominatim()
 
 def signup(request):
     context = {}
@@ -24,10 +26,13 @@ def signup(request):
             company_name = str(company_name)
             address = str(address)
             email = str(email)
-            conversion(address, shelter_or_restaurant, email, company_name)
-            context = data()
+            thing = g.geocode(address)
+            lat, lng = thing.latitude, thing.longitude
             account = authenticate(company_name=company_name, password=raw_password)
-            return render(request, 'maps.html', context)
+            conversion(lat, lng, email, company_name, shelter_or_restaurant, address)
+            with open('templates/blah.json') as f:
+                information = json.load(f)
+            return render(request, 'maps.html', information)
         else:
             context['form'] = form
     else:
