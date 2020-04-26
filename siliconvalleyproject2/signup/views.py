@@ -29,7 +29,7 @@ def signup(request):
             email = str(email)
             conversion(lat, lng, email, company_name)
             account = authenticate(company_name=company_name, password=raw_password)
-            return redirect('home')
+            return render(request, 'maps.html')
         else:
             context['form'] = form
     else:
@@ -51,7 +51,7 @@ def login_view(request):
             user = authenticate(company_name=company_name, password=password)
             if user:
                 login(request, user)
-                return redirect('home')
+                return render(request, 'maps.html')
     else:
         form = AccountAuthenticationForm()
     context['form'] = form
