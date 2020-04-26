@@ -1,6 +1,7 @@
 {
   "companies": [
     {
+<<<<<<< HEAD
       "lat": 42.01750115,
       "long": -88.08042685550453,
       "email": "thi8s@gamil.com",
@@ -83,6 +84,66 @@
       "long": -87.80371249730237,
       "email": "tecscji@gmail.com",
       "company_name": "ehgteirhfiefjdvf"
+=======
+      "address": "dunkindon@gmail.com",
+      "shelter_or_restaurant": "DonkinDunouts",
+      "email": "865 Eaton Ct. Schaumburg",
+      "company_name": "Shelter"
+    },
+    {
+      "address": "dunkindon@gmail.com",
+      "shelter_or_restaurant": "DonkinDunouts",
+      "email": "865 Eaton Ct. Schaumburg",
+      "company_name": "Shelter"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+>>>>>>> 1c877f0960e27f9de140d5592265233448004b5c
     }
   ]
 }

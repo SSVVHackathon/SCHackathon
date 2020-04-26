@@ -38,9 +38,13 @@ class MyAccountManager(BaseUserManager):
 
 
 class Profile(AbstractBaseUser):
+    TYPES = (
+        ('Shelter', 'Shelter'),
+        ('Restaurant', 'Restaurant'),
+    )
     email = models.EmailField(verbose_name="email", max_length=60, unique=True)
     address = models.CharField(max_length=100, unique=True)
-    shelter_or_restaurant = models.CharField(max_length=40)
+    shelter_or_restaurant = models.CharField(max_length=100, choices=TYPES)
     company_name = models.CharField(max_length=200, unique=True)
     username = models.CharField(max_length=30)
     date_joined = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
