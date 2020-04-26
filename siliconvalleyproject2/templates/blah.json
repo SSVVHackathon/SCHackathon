@@ -1,12 +1,29 @@
 {
   "companies": [
     {
+<<<<<<< HEAD
       "address": "865 Eaton Ct. Schaumburg",
       "lat": 42.011577041468875,
       "lng": -88.0723791236503,
       "shelter_or_restaurant": "Shelter",
       "email": "dunkindon@gmail.com",
       "company_name": "DonkinDunouts"
+=======
+      "address": "1331 Golf Rd, Rolling Meadows, IL 60008",
+      "lat": 42.051447139654414,
+      "lng": -88.00231900606973,
+      "shelter_or_restaurant": "Restaurant",
+      "email": "ergfvdckokvjopkikokhire@gmial.cvomcc",
+      "company_name": "fdstheihkopkotefeswpkffepvpppkcdc"
+    },
+    {
+      "address": "1532 Petersham Ln, Schaumburg IL",
+      "lat": 42.033577325842025,
+      "lng": -88.04162276393437,
+      "shelter_or_restaurant": "Shelter",
+      "email": "ergfvdckokvjopmknkkikokhire@gmial.ijcvomcc",
+      "company_name": "fdstheihkopkotefeckbvnkswpkffepvpppkcdcjijh"
+>>>>>>> 677cb29828562ccfd0a6b85586b60b078e323467
     }
   ]
 }

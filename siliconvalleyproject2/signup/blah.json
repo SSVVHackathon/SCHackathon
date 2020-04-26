@@ -1,4 +1,152 @@
 {
   "companies": [
+<<<<<<< HEAD
+=======
+    {
+<<<<<<< HEAD
+      "lat": 42.01750115,
+      "long": -88.08042685550453,
+      "email": "thi8s@gamil.com",
+      "company_name": "ukyitjodf slbv"
+    },
+    {
+      "lat": 42.033577325842025,
+      "long": -88.04162276393437,
+      "email": "hjkmfgbnvdsc@gamil.com",
+      "company_name": "uiosdflc"
+    },
+    {
+      "lat": 42.0380236055313,
+      "long": -88.05813598819343,
+      "email": "nah@gmail.comn",
+      "company_name": "l;osfgkvhuiosdjvgxb sdhjkvdhjkbnc bjndghyujcxfmo cbnmhxjvfdghjkcbnm  d"
+    },
+    {
+      "lat": 42.131738,
+      "long": -73.89061175255883,
+      "email": "wthwei@gmail.com",
+      "company_name": "weheifh"
+    },
+    {
+      "lat": 41.9892571,
+      "long": -88.1177361,
+      "email": "wthwdvdgfdcxvdvei@gmail.com",
+      "company_name": "hnbt ,dflmyjhtg"
+    },
+    {
+      "lat": 41.9892571,
+      "long": -88.1177361,
+      "email": "wcsdi@gmail.com",
+      "company_name": "hnbt ,dflmyjhtgegv"
+    },
+    {
+      "lat": 41.9892571,
+      "long": -88.1177361,
+      "email": "wcsdcsdvi@gmail.com",
+      "company_name": "hnbt ,dflmyjhtgegsdgfvv"
+    },
+    {
+      "lat": 41.9892571,
+      "long": -88.1177361,
+      "email": "wdedgffwfnini@gmail.com",
+      "company_name": "htgirehtiehteihti"
+    },
+    {
+      "lat": 42.0631664,
+      "long": -88.0303103,
+      "email": "swag@gmail.com",
+      "company_name": "ufgbeiubvids"
+    },
+    {
+      "lat": 42.0474244,
+      "long": -88.0439928,
+      "email": "swagmoneuy@gmail.com",
+      "company_name": "ufgbeiubvidssxvvcs"
+    },
+    {
+      "lat": 42.037326199999995,
+      "long": -88.04905267286081,
+      "email": "kumytdbnrcwshbgevf@gmail.com",
+      "company_name": "iumyknjthbrgvgfcw"
+    },
+    {
+      "lat": 42.13909782124463,
+      "long": -88.02735077652665,
+      "email": "kumytdbnrcwsxsahbgevf@gmail.com",
+      "company_name": "iumyknjthbrgvgfcwwd"
+    },
+    {
+      "lat": 41.9535965,
+      "long": -87.8089676,
+      "email": "hjtei@gfmial.com",
+      "company_name": "tgheife"
+    },
+    {
+      "lat": 41.8883414,
+      "long": -87.80371249730237,
+      "email": "tecscji@gmail.com",
+      "company_name": "ehgteirhfiefjdvf"
+=======
+      "address": "dunkindon@gmail.com",
+      "shelter_or_restaurant": "DonkinDunouts",
+      "email": "865 Eaton Ct. Schaumburg",
+      "company_name": "Shelter"
+    },
+    {
+      "address": "dunkindon@gmail.com",
+      "shelter_or_restaurant": "DonkinDunouts",
+      "email": "865 Eaton Ct. Schaumburg",
+      "company_name": "Shelter"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+>>>>>>> 1c877f0960e27f9de140d5592265233448004b5c
+    }
+>>>>>>> 677cb29828562ccfd0a6b85586b60b078e323467
   ]
 }
