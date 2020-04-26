@@ -16,33 +16,48 @@
 </head>
 <body>
 <div id="map"></div>
+
 <script>
+ 
 
     function initMap(){
         var options ={
             zoom:8,
             center:{lat:39.8283,lng:-98.5795}
         };
-        var map = new google.maps.Map(document.getElementById('map'),options);
-        function addMarker(coords, content) {
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+        function addMarker(props) {
             var marker = new google.maps.Marker({
-            position:coords,
+            position:props.coords,
             map:map
 
         });
-            var infoWindow = new google.maps.InfoWindow({
-                content:'<p>'+words+'</p>'
-            });
+           // var infoWindow = new google.maps.InfoWindow({
+           //     content:'<p>'+content+'</p>'
+            //});
             marker.addListener('click', function(){
                 infoWindow.open(map, marker);
             });
+        }
+        var dict = "{{companies|safe}}"
+        console.log(dict)
+        var my = dict.replace(/'/g, '"');
+        console.log(my)
+        var dictBetter = my.toString()
+        console.log(dictBetter)
+        var god = JSON.parse(dictBetter);
+        console.log(god[0].address)
+        for(let x=0;x<god.length;x++){
+            addMarker({coords:{lat:god[x].lat, lng:god[x].lng}})
         }
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdGZWcX8NeOm5jDClKiQuaLxwCV128Wu8&callback=initMap"
         async defer></script>
 </body>
-    <h1>Restaurants</h1>
+    <!-- <h1>Restaurants</h1>
     {%for c in companies%}
         {%if c.shelter_or_restaurant == 'Restaurant'%}
             <p>{{c.company_name}}</p>
@@ -58,16 +73,11 @@
             <p>{{d.address}}</p>
             <p>{{d.email}}</p>
             <script type ='text/javascript'>
-                var email = "{{d.email}}"
-                var address = "{{d.address}}"
                 var company_name = "{{d.company_name}}"
-                var lat = "{{d.lat}}"
-                lat = parseFloat(lat)
-                var lng = "{{d.lng}}"
-                lng = parseFloat(lat)
-                initMap().addMarker({coords:{lat:lat,  lng:lng}, content:company_name})
+                var address = "{{d.address}}"
+                var email = "{{d.email}}"
             </script>
         {%endif%}
-    {%endfor%}
+    {%endfor%} -->
 
 {%endblock%}
