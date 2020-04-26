@@ -3,32 +3,18 @@
 {%block map%}
     <h1>Restaurants</h1>
     {%for c in companies%}
-<<<<<<< HEAD
         {%if c.shelter_or_restaurant == 'Restaurant'%}
             <p>Company Name: {{c.company_name}}</p>
             <p>Address: {{c.address}}</p>
             <p>Email: {{c.email}}</p>
-=======
-        {%if {{c.shelter_or_restaurant}} == 'Restaurant'%}
-            <p>{{c.company_name}}</p>
-            <p>{{c.address}}</p>
-            <p>{{c.email}}</p>
->>>>>>> 677cb29828562ccfd0a6b85586b60b078e323467
         {%endif%}
     {%endfor%}
     <h1>Shelters</h1>
     {%for d in companies%}
-<<<<<<< HEAD
         {%if d.shelter_or_restaurant == 'Shelter'%}
             <p>Company Name: {{d.company_name}}</p>
             <p>Address: {{d.address}}</p>
             <p>Email: {{d.email}}</p>
-=======
-        {%if {{d.shelter_or_restaurant}} == 'Shelter'%}
-            <p>{{d.company_name}}</p>
-            <p>{{d.address}}</p>
-            <p>{{d.email}}</p>
->>>>>>> 677cb29828562ccfd0a6b85586b60b078e323467
         {%endif%}
     {%endfor%}
 <!-- <head>
