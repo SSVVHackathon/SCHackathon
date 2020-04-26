@@ -1,6 +1,6 @@
 import json
 def conversion(lat, lng, email, company_name):
-    with open('signup/blah.json') as f:
+    with open('templates/blah.json') as f:
         data = json.load(f)
     new_info = {
         "lat":lat,

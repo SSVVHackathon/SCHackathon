@@ -35,7 +35,7 @@ def signup(request):
     else:
         form = ProfileForm()
         context['form'] = form
-    return render(request, 'signup.html', context)
+    return render(request, 'signup.html', {'context':['yay','yippee']})
 
 def login_view(request):
     context = {}

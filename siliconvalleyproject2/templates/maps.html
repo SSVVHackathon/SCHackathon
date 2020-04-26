@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{%extends 'base.html'%}
+
+{%block map%}
+    {%for c in context%}
+        <h1>{{c}}</h1>
+    {%endfor%}
+<!-- <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
@@ -9,14 +13,18 @@
             width:100%;
         }
     </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+   
 </head>
 <body>
 <div id="map"></div>
 <script>
+
     function initMap(){
         var options ={
             zoom:8,
-            center:{lat:42,lng:-71}
+            center:{lat:39.8283,lng:-98.5795}
         };
         var map = new google.maps.Map(document.getElementById('map'),options);
 
@@ -27,9 +35,15 @@
         marker.addListener('click', function(){
             infoWindow.open(map, marker);
         })*/
-        var jsonobj = signup/blah.json
-        var obj = JSON.parse(jsonobj)
-        addMarker({lat:42.4668,lng:-70.9495},obj.companies.email);
+    
+       // var obj = JSON.parse(jsonobj)
+        //for (let index =0;index<obj.companies.length;index++){
+          //  let lati = obj.companies[index].lat
+            //let longi = obj.companies[index].long
+           // //let ema = obj.companies[index].email
+           // let compi = obj.companies[index].company_name
+            //addMarker({lat:parseFloat(lati),lng:parseFloat(longi)},obj.companies[0].email);
+        //}
         function addMarker(coords,content) {
             var marker = new google.maps.Marker({
             position:coords,
@@ -37,7 +51,7 @@
 
         });
             var infoWindow = new google.maps.InfoWindow({
-                content:'<h1>'+words+'</h1>'
+                content:'<p>'+words+'</p>'
             });
             marker.addListener('click', function(){
                 infoWindow.open(map, marker);
@@ -47,5 +61,5 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdGZWcX8NeOm5jDClKiQuaLxwCV128Wu8&callback=initMap"
         async defer></script>
-</body>
-</html>
+</body> -->
+{%endblock%}
