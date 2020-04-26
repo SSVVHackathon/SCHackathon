@@ -1,11 +1,6 @@
 {%extends 'base.html'%}
 
 {%block map%}
-
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdGZWcX8NeOm5jDClKiQuaLxwCV128Wu8&callback=initMap"
-        async defer></script>
-</body>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -44,6 +39,9 @@
         }
     }
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdGZWcX8NeOm5jDClKiQuaLxwCV128Wu8&callback=initMap"
+        async defer></script>
+</body>
     <h1>Restaurants</h1>
     {%for c in companies%}
         {%if c.shelter_or_restaurant == 'Restaurant'%}
@@ -71,7 +69,5 @@
             </script>
         {%endif%}
     {%endfor%}
-
-
 
 {%endblock%}
