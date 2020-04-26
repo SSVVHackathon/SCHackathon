@@ -4,6 +4,11 @@ from . forms import ProfileForm
 from . jsonconversion import conversion
 import json
 from . forms import ProfileForm, AccountAuthenticationForm
+import re
+from geopy import geocoders
+
+g = geocoders.Nominatim()
+
 # from .forms import ProfileForm
 # Create your views here.
 
@@ -19,8 +24,10 @@ def signup(request):
             email = form.cleaned_data.get('email')
             company_name = str(company_name)
             address = str(address)
+            address = g.geocode(address)
+            lat, lng = address.latitude, address.longitude
             email = str(email)
-            conversion(address, email, company_name)
+            conversion(lat, lng, email, company_name)
             account = authenticate(company_name=company_name, password=raw_password)
             return redirect('home')
         else:

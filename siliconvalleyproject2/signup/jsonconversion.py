@@ -1,9 +1,10 @@
 import json
-def conversion(address, email, company_name):
+def conversion(lat, lng, email, company_name):
     with open('signup/blah.json') as f:
         data = json.load(f)
     new_info = {
-        "address":address,
+        "lat":lat,
+        "long":lng,
         "email":email,
         "company_name":company_name
     }
