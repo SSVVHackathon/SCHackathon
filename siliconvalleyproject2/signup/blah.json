@@ -1,4 +1,64 @@
 {
   "companies": [
+    {
+      "address": "dunkindon@gmail.com",
+      "shelter_or_restaurant": "DonkinDunouts",
+      "email": "865 Eaton Ct. Schaumburg",
+      "company_name": "Shelter"
+    },
+    {
+      "address": "dunkindon@gmail.com",
+      "shelter_or_restaurant": "DonkinDunouts",
+      "email": "865 Eaton Ct. Schaumburg",
+      "company_name": "Shelter"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    },
+    {
+      "address": "865 Eaton Ct. Schaumburg",
+      "shelter_or_restaurant": "Shelter",
+      "email": "dunkindon@gmail.com",
+      "company_name": "DonkinDunouts"
+    }
   ]
 }

@@ -4,10 +4,7 @@ from . forms import ProfileForm
 from . jsonconversion import conversion
 import json
 from . forms import ProfileForm, AccountAuthenticationForm
-import re
-from geopy import geocoders
-
-g = geocoders.Nominatim()
+from . getdata import data
 
 # from .forms import ProfileForm
 # Create your views here.
@@ -22,14 +19,15 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             address = form.cleaned_data.get('address')
             email = form.cleaned_data.get('email')
+            shelter_or_restaurant = form.cleaned_data.get('shelter_or_restaurant')
+            shelter_or_restaurant = str(shelter_or_restaurant)
             company_name = str(company_name)
             address = str(address)
-            address = g.geocode(address)
-            lat, lng = address.latitude, address.longitude
             email = str(email)
-            conversion(lat, lng, email, company_name)
+            conversion(address, shelter_or_restaurant, email, company_name)
+            context = data()
             account = authenticate(company_name=company_name, password=raw_password)
-            return render(request, 'maps.html')
+            return render(request, 'maps.html', context)
         else:
             context['form'] = form
     else:

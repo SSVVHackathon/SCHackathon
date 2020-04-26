@@ -27,9 +27,9 @@
         marker.addListener('click', function(){
             infoWindow.open(map, marker);
         })*/
-        var jsonobj = signup/blah.json
-        var obj = JSON.parse(jsonobj)
-        addMarker({lat:42.4668,lng:-70.9495},obj.companies.email);
+        parse('signup/blah.json')
+        //console.log(obj)
+        //addMarker({lat:42.4668,lng:-70.9495},jsonobj.companies[0].email);
         function addMarker(coords,content) {
             var marker = new google.maps.Marker({
             position:coords,
