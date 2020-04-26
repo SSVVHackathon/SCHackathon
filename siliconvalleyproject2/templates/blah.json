@@ -1,52 +1,28 @@
 {
   "companies": [
     {
-      "address": "865 Eaton Ct. Schaumburg",
-      "lat": 42.011577041468875,
-      "lng": -88.0723791236503,
-      "shelter_or_restaurant": "Shelter",
-      "email": "dunkindon@gmail.com",
-      "company_name": "DonkinDunouts"
+      "address": "1532 Petersham Ln, Schaumburg IL",
+      "lat": 42.033577325842025,
+      "lng": -88.04162276393437,
+      "shelter_or_restaurant": "Restaurant",
+      "email": "sohamgupta21@gmail.com",
+      "company_name": "SG Associates"
     },
     {
-      "address": "865 Eaton Ct. Schaumburg",
-      "lat": 42.011577041468875,
-      "lng": -88.0723791236503,
+      "address": "867 Eaton Ct, Schaumburg, IL",
+      "lat": 42.011572980206005,
+      "lng": -88.07237517520028,
       "shelter_or_restaurant": "Shelter",
-      "email": "dunkindon@gmail.com",
-      "company_name": "DonkinDunouts"
+      "email": "dfgfg@gmail.com",
+      "company_name": "dgfgn"
     },
     {
-      "address": "865 Eaton Ct. Schaumburg",
-      "lat": 42.011577041468875,
-      "lng": -88.0723791236503,
+      "address": "861 Eaton Ct, Schaumburg, IL",
+      "lat": 42.011585163994624,
+      "lng": -88.07238702055034,
       "shelter_or_restaurant": "Shelter",
-      "email": "dunkindon@gmail.com",
-      "company_name": "DonkinDunouts"
-    },
-    {
-      "address": "865 Eaton Ct. Schaumburg",
-      "lat": 42.011577041468875,
-      "lng": -88.0723791236503,
-      "shelter_or_restaurant": "Shelter",
-      "email": "dunkindon@gmail.com",
-      "company_name": "DonkinDunouts"
-    },
-    {
-      "address": "865 Eaton Ct. Schaumburg",
-      "lat": 42.011577041468875,
-      "lng": -88.0723791236503,
-      "shelter_or_restaurant": "Shelter",
-      "email": "dunkindon@gmail.com",
-      "company_name": "DonkinDunouts"
-    },
-    {
-      "address": "865 Eaton Ct. Schaumburg",
-      "lat": 42.011577041468875,
-      "lng": -88.0723791236503,
-      "shelter_or_restaurant": "Shelter",
-      "email": "dunkindon@gmail.com",
-      "company_name": "DonkinDunouts"
+      "email": "feefg@gmail.com",
+      "company_name": "eogjodfgjdmv"
     }
   ]
 }
